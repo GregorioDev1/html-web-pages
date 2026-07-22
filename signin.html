@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Code Quest</title>
+</head>
+<body>
+    <!-- Header / navigation (consistent with page 1) -->
+        <header>
+            <nav>
+                <div class="logo">Code Quest</div>
+                <ul>
+                    <li><a href="index.html"><strong>Home</strong></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main content -->
+        <main>
+            <!-- authentication coontainer -->
+            <section class="auth-container">
+                <div class="auth-header">
+                    <h1>Welcome Back</h1>
+                </div>
+                <!-- sign in form -->
+                    <form action="signin.html" method="post">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" autocomplete="current-password" placeholder="Enter your password">
+                        </div>
+                        <button type="submit" class="btn-primary">Sign In</button>
+                    </form>
+                    <!-- link to signup page -->
+                    <div class="auth-footer">
+                        <p>New to Code Quest, Don't have an account? <a href="signup.html">Create an Account</a></p>
+                    </div>
+            </section>
+        </main>
+
+        <!-- Image -->
+        <section class="auth-banner">
+            <img src="assets/coding.png" alt="developer writing code" class="coding-img">
+        </section>
+
+        <!-- Footer (consistent with page 1) -->
+        <footer>
+             <p>&copy; 2026 Code Quest. All rights reserved.</p>
+        </footer>
+
+</body>
+</html>
