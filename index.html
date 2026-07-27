@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quest</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -15,19 +16,19 @@
             <ul class="nav-links">
                 <li><a href="about.html">About</a></li>
                 <li><a href="profile.html">Profile</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="features.html">Features</a></li>
+                <li><a href="practice.html">Practice</a></li>
                 <li><a href="testimonial.html">Testimonials</a></li>
-                <li><a href="stats.html">Stats</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
             </ul>
             <div class="nav-cta">
                 <!-- <a href="https://codequest.com/register">Register</a> -->
+                <h2>Register</h2>
                 <a href="signin.html" class="btn-secondary">Sign In</a>
                 <a href="signup.html" class="btn-primary">Sign Up</a>
             </div>
         </nav>
     </header>
-
+    <!-- hero section-->
     <main>
         <section class="hero">
             <div class="hero-content">
@@ -36,23 +37,35 @@
                     Code Quest
                     <img src="assets/logo.svg" alt="" class="title-logo">
                 </h1>
-                <p>Code Quest is a community of coders, where you can learn, collaborate, and compete with other coders.</p>
-                <a href="https://codequest.com/register" class="btn-primary">Register</a>
+                <p>Code Quest is a community of coders, where you can continue to Learn, Collaborate, and Compete!</p>
             </div>
         </section>
 
-        <section class="features">
-            <div class="features-content">
-                <h2>Features</h2>
-                <p>Code Quest Membership Opportunities</p>
-                <ul>
+    <!-- practice section-->
+        <section class="practice-section">
+            <div class="practice-card">
+                <h2>Practice Area</h2>
+                <ul class="practice-content">
+                    <li>Problems for Practice</li>
+                    <li>Programming Languages</li>
+                    <li>Coders</li>
+                    <li>Submissions</li>
+                </ul>
+            </div>
+        </section>
+
+    <!-- features section-->
+        <section class="features-section">
+            <div class="features-card">
+                <h2>Code Quest Features</h2>
+                <p> What you will <span>gain...</span></p>
+                <ul class="features-content">
                     <li>Code Challenges</li>
                     <li>Competitions</li>
-                    <li>Leaderboards</li>
+                    <li>Progress Tracker</li>
                     <li>Community</li>
                     <li>Mentorship</li>
-                    <li>Teams</li>
-                    <li>Events</li>
+                    <li>Solutions</li>
                 </ul>
             </div>
         </section>
@@ -72,9 +85,24 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
+    <footer class="footer-section">
+        <div class="footer-container">
+            <form class="footer-form" action="#" method="POST">
+                <h3>Contact Us</h3>
+                <div class="footer-input-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="footer-input-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="footer-input-group">
+                    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+            <div class="footer-content">
             <p>&copy; 2026 Code Quest. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 </body>

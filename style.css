@@ -1,0 +1,487 @@
+@import url('https://googleapis.com');
+
+/* color palette */
+:root {
+  --primary: #8053FF;
+  --body-text: #23155B;
+  --gray-light: #817d8e;
+  --white: #ffffff;
+  --bg-color: #f4f4f4;
+  --dark-purple: #1a0f47; 
+  
+  /* Typography Variables*/
+  --font-main: 'Martel Sans', 'Noto Sans Khojki', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--bg-color);
+  box-shadow: 0 4px 20px rgba(35, 21, 91, 0.05);
+  border-bottom: 1px solid rgba(129, 125, 142, 0.1) ;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--body-text);
+  line-height: 1.75;
+}
+/* navbar */
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 0.6rem 1.5rem;
+  border: 2px solid var(--body-text);
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--body-text);
+}
+
+.btn-secondary {
+  color: var(--white);
+  border: 2px solid var(--body-text);
+  background-color: var(--gray-light);
+  padding: 0.6rem 1.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--body-text);
+}
+
+.logo a {
+  display: flex;
+  text-decoration: none;
+  color: var(--body-text);
+  font-size: 1.25rem;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: auto max-content 1fr;
+  align-items: center;
+  padding: 2rem 4%;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 3.25rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; 
+  list-style: none;
+  text-align: center;
+  gap: 3rem;             /* Balanced spacing */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--body-text);
+  font-size: 0.95rem;
+  font-weight: 500;
+  white-space: nowrap;     /* Hard block against individual word wrapping */
+}
+
+.nav-cta {
+  display: flex;
+  justify-content: flex-end; /* Forces buttons to stick cleanly to the right side */
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-cta h2 {
+  display: none; /* Hides the extra heading text in the CTA area */
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 5%;
+  text-align: center;
+  background-color: var(--white);
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.title-logo {
+  width: 45px;
+  height: 45px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: var(--gray-light);
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/*Practice Area*/
+.practice-section {
+  padding: 3rem 10%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.practice-card {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  width: auto;
+}
+
+.practice-card h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem
+}
+
+.practice-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.practice-content li {
+  background: var(--primary);
+  padding: 1.2rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 700;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  border-left: 10px solid var(--gray-light);
+  color: var(--white);
+}
+
+/* Features Sections */
+.features-section {
+  padding: 1rem 10%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.features-card {
+  background-color: var(--gray-light);
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  width: auto;
+}
+
+.features-card h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 1rem
+}
+
+.features-card p {
+  text-align: left;
+  color: var(--body-text);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+}
+
+.features-card p span {
+  color:var(--bg-color);
+  font-weight: 700;
+}
+
+.features-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.features-content li {
+  background: var(--white);
+  padding: 1.2rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 700;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  border-left: 10px solid var(--primary);
+}
+
+/* Testimonials Section */
+.testimonial-section {
+  padding: 6rem 10%;
+  background-color: var(--white);
+  text-align: center;
+}
+
+.testimonial-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+.testimonial-card {
+  background: var(--bg-color);
+  padding: 3rem;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.testimonial-card blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: var(--body-text);
+}
+
+.testimonial-card .author {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.testimonial-card cite {
+  font-weight: 300;
+  color: var(--gray-light);
+  font-style: normal;
+}
+
+/* Footer  */
+.footer-section {
+  background-color: var(--dark-purple);
+  color: var(--white);
+  padding: 4rem 10% 2rem;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer-form h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+}
+
+.footer-form input,
+.footer-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05); /* Transparent input background panels */
+  color: var(--white);
+  border-radius: 6px;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.footer-form textarea {
+  resize: vertical;
+}
+
+.footer-form input:focus,
+.footer-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-form input::placeholder,
+.footer-form textarea::placeholder {
+  color: var(--gray-light);
+  opacity: 0.7;
+}
+
+.footer-form .btn-primary {
+  width: 100%;
+}
+
+.footer-content p {
+  color: var(--gray-light);
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+}
+
+/* signup page */
+
+.logo1 {
+  text-decoration: none;
+  color: var(--body-text);
+  font-size: 1.5rem;
+}
+
+.auth-container {
+  width: 95%;
+  max-width: 450px; 
+  margin: 2rem auto; 
+  text-align: center;
+}
+
+.team-img {
+  width: 95%;
+  max-width: 450px; 
+  margin: 2rem auto;
+  opacity: 0.95;
+  border-radius: 8px;
+}
+
+.auth-header h2 {
+  margin-bottom: 2rem;
+  color: var(--body-text);
+}
+
+.team-section h2 {
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+.auth-form {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid rgba(129, 125, 142, 0.4);
+  border-radius: 8px;
+  color: var(--body-text);
+  font-family: var(--font-main);
+  font-size: 1rem;
+  background-color: var(--white);
+  transition: all 0.2s ease;
+}
+
+.team-section {
+  text-align: center;
+}
+
+/*50/50 horizontal gradient split*/
+body:has(.auth-container) {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(
+    to bottom, 
+    var(--bg-color) 0%, 
+    var(--bg-color) 50%, 
+    var(--dark-purple) 50%, 
+    var(--dark-purple) 100%
+  )
+}
+
+/* Highlights text fields smoothly when selected */
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(128, 83, 255, 0.15);
+}
+
+.auth-form .btn-primary {
+  width: 100%;
+  padding: 0.85rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.auth-account p {
+  color: var(--gray-light);
+  font-size: 0.9rem;
+}
+
+.auth-account a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.auth-account a:hover {
+  text-decoration: underline;
+}
+
+/* signup page */
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* This finally forces the Sign In button dead-center */
+  width: 100%;
+}
+
+/* 2. Protects email and password fields from shrinking */
+.signin-form .form-group {
+  width: 100%;
+}
+
+.auth-banner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.auth-banner .coding-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.auth-header {
+  margin-bottom: 2.5rem;
+}
+
+.signin-form .btn-primary {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.signin-form .form-group {
+  margin-bottom: 1rem; /* Keeps a clean, uniform gap between the fields */
+}
