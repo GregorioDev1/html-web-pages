@@ -19,6 +19,13 @@
   padding: 0;
 }
 
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--body-text);
+  line-height: 1.75;
+}
+
 header {
   background-color: var(--bg-color);
   box-shadow: 0 4px 20px rgba(35, 21, 91, 0.05);
@@ -28,14 +35,16 @@ header {
   z-index: 100;
 }
 
-body {
-  font-family: var(--font-main);
-  background-color: var(--bg-color);
-  color: var(--body-text);
-  line-height: 1.75;
+.menu-toggle {
+  display: block; 
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
 }
-/* navbar */
 
+/* navbar */
 .btn-primary {
   display: inline-block;
   background-color: var(--primary);
@@ -76,25 +85,26 @@ body {
 }
 
 nav {
-  display: grid;
-  grid-template-columns: auto max-content 1fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 2rem 4%;
   max-width: 1400px;
   margin: 0 auto;
-  gap: 3.25rem;
+  gap: 1.5rem;
 }
 
 .nav-links {
-  display: flex;
-  flex-direction: row;
+  display: none;
+  flex-direction: column;
+  position: absolute;
   flex-wrap: nowrap; 
   list-style: none;
   text-align: center;
-  gap: 3rem;             /* Balanced spacing */
+  gap: 2rem;             /* Balanced spacing */
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 20px 0;
 }
 
 .nav-links a {
@@ -114,6 +124,10 @@ nav {
 
 .nav-cta h2 {
   display: none; /* Hides the extra heading text in the CTA area */
+}
+
+.nav-links.active {
+  display: flex; 
 }
 
 /* Hero Section */
@@ -161,7 +175,7 @@ nav {
 
 .practice-card {
   background-color: var(--white);
-  padding: 2rem;
+  padding: 4rem;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
   width: auto;
@@ -175,6 +189,8 @@ nav {
 
 .practice-content {
   display: grid;
+  text-align: center;
+  justify-content: center;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   list-style: none;
@@ -199,8 +215,11 @@ nav {
 }
 
 .features-card {
+  display: block;
   background-color: var(--gray-light);
-  padding: 3rem;
+  text-align: center;
+  gap: 1.5rem;
+  padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
   width: auto;
@@ -209,11 +228,11 @@ nav {
 .features-card h2 {
   text-align: center;
   font-size: 2.2rem;
-  margin-bottom: 1rem
+  margin-bottom: 1rem;
 }
 
 .features-card p {
-  text-align: left;
+  text-align: center;
   color: var(--body-text);
   font-size: 1.1rem;
   font-weight: 700;
@@ -228,12 +247,22 @@ nav {
 
 .features-content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  list-style: none;
+  justify-content: center;
+  align-content: cnetre;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .features-content li {
+  display: flex;
+  flex-direction: column;
+  justify-content: centre;
+  align-items: center;
+  text-align: center;
   background: var(--white);
   padding: 1.2rem;
   border-radius: 8px;
@@ -484,4 +513,41 @@ body:has(.auth-container) {
 
 .signin-form .form-group {
   margin-bottom: 1rem; /* Keeps a clean, uniform gap between the fields */
+}
+
+@media (min-width: 768px) {
+  nav {
+    gap: 3.25rem; /* Restores your original wide spacing */
+  }
+
+  .nav-links {
+    display: flex;         
+    flex-direction: row;    
+    position: static;
+    gap: 3rem;    
+    width: auto;           
+    padding: 0;
+    background-color: transparent;
+    order: 2;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  .nav-links a {
+    pointer-events: auto; 
+    text-decoration: none;
+    color: var(--body-text);
+    font-size: 0.95rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .nav-cta {
+    order: 3; 
+    margin-left: auto;
+  }
+
+  .menu-toggle {
+    display: none;         /* Hides your hamburger button on desktop */
+  }
 }
