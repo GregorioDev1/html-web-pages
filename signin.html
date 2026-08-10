@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In - Code Quest</title>
+    <title>Sign In - Code CLA</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -12,20 +12,11 @@
         <header>
         <nav>
             <div class="logo">
-                <a href="index.html"><strong>Code Quest</strong></a>
+                <img src="assets/logo.svg" alt="" class="title-logo">
+                <a href="index.html">CodeCLA</a>
             </div>
-            <ul class="nav-links">
-                <li><a href="about.html">About</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="practice.html">Practice</a></li>
-                <li><a href="testimonial.html">Testimonials</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
-            </ul>
             <div class="nav-cta">
-                <!-- <a href="https://codequest.com/register">Register</a> -->
-                <h2>Register</h2>
-                <a href="signin.html" class="btn-secondary">Sign In</a>
-                <a href="signup.html" class="btn-primary">Sign Up</a>
+                <!-- <a href="https://codecla.com/register">Register</a> -->
             </div>
         </nav>
     </header>
@@ -33,35 +24,34 @@
     <!-- Main content -->
         <main>
             <!-- authentication coontainer -->
-            <section class="auth-container">
-                <div class="auth-header">
-                    <h1>Welcome Back</h1>
-                </div>
-                <!-- sign in form -->
-                    <form action="signin.html" method="post" class="signin-form">
+            <section class="split-auth-container">
+                 <div class="auth-image-side">
+                <img src="assets/coding.png" alt="Decorativ logo"  class="split-coding">
+            </div>
+            <div class="auth-data-side">
+                <form action="signin.html" method="post" class="signin-form">
+                    <div>
+                        <h1>Welcome Back!</h1>
+                        </div>
                         <div class="form-group">
                             <input type="email" name="email" id="email" placeholder="Enter your email">
                         </div>
                         <div class="form-group">
                             <input type="password" name="password" id="password" autocomplete="current-password" placeholder="Enter your password">
                         </div>
-                        <button type="submit" class="btn-primary">Sign In</button>
-                    </form>
-                    <!-- link to signup page -->
-                    <div class="auth-footer">
-                        <p>New to Code Quest, Don't have an account? <a href="signup.html">Create an Account</a></p>
-                    </div>
+                        <button type="submit" class="btn-primary-login">Log In</button>
+                        <div class="auth-login">
+                        <p>New to CodeCLA? <a href="signup.html">Create an Account</a></p>
+                        </div>
+                </form>
+            </div>
             </section>
         </main>
-
-        <!-- Image -->
-        <section class="auth-banner">
-            <img src="assets/coding.png" alt="developer writing code" class="coding-img">
-        </section>
-
         <!-- Footer (consistent with page 1) -->
         <footer>
-             <p>&copy; 2026 Code Quest. All rights reserved.</p>
-        </footer>
+        <div class="footer">
+            <p>&copy; 2026 CodeCLA. All rights reserved.</p>
+        </div>
+    </footer>
     </body>
 </html>
